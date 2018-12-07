@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Arrays</title>
+
+    <style>
+        #demo {
+            min-height: 50px;
+        }
+
+        button {
+
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <button id="btn-text" onclick="textOutput();">Text</button>
+    <button id="btn-mango" onclick="addMango();">Add Mango</button>
+    <button id="btn-delete" onclick="deleteLast();">Letztes Löschen</button>
+    <button id="btn-splice" onclick="fillIn();">Beliebig einfügen</button>
+    <button id="btn-sort" onclick="sortArray();">Alphabetisch</button>
+    <button id="btn-concat" onclick="combineArray();">Kombinieren</button>
+
+
+    <script>
+        
+        var demoDiv = document.getElementById('demo');
+
+         
+            /* var allP = document.getElementsByTagName('p'); */ 
+        
+
+        /* Array */
+
+        
+
+        var fruitSalad = ['Banane', 'Apfel', 'Kiwi'];
+
+        //  Stelle           0         1        2
+        // length            1         2        3
+
+
+        function textOutput(){
+            demoDiv.innerHTML = fruitSalad.join(', ');
+        }
+
+        function addMango(){
+            fruitSalad.push('Mango');
+            demoDiv.innerHTML += "<br>" + fruitSalad.join(', ');
+        }
+
+        function deleteLast(){
+            fruitSalad.pop();
+            demoDiv.innerHTML += "<br>" + fruitSalad.join(', ');
+        }
+
+        // shift/unshift
+
+        function fillIn(){
+            fruitSalad.splice(1, 0, 'Birne');
+            demoDiv.innerHTML += "<br>" + fruitSalad.join(', ');
+        }
+
+        function sortArray(){
+            fruitSalad.sort();
+            demoDiv.innerHTML += "<br>" + fruitSalad.join(', ');
+        }
+
+        var citrusFruits = ['Orange', 'Mandarine', 'Kumquat'];
+
+
+        function combineArray(){
+            var allFruits = fruitSalad.concat(citrusFruits);
+            allFruits.sort();
+            demoDiv.innerHTML += "<br>" + allFruits.join(', ');
+        }
+
+        console.log(fruitSalad[1]);
+
+        
+       /*  
+       for(var i = 0; i < fruitSalad.length; i++){
+            // ganz toller Code
+
+            fruitSalad[i]
+        } 
+        */
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

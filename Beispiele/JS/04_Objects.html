@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objects</title>
+
+    <style>
+        body {
+            font-family: Cambria, Georgia, 'Times New Roman', serif;
+            font-size: 16px;
+            padding: 2rem;
+        }
+
+        div {
+            width: 200px;
+            min-height: 40px;
+            border: 1px solid forestgreen;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            /* text-align: center; */
+            /* line-height: 40px; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo01"></div>
+    <div id="demo02"></div>
+    <div id="demo03"></div>
+
+    <script>
+
+        var person = {
+            firstName: "Max",
+            lastName: "Mustermann",
+            id: 007,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // Vorname mit DOT-notation ausgeben: 
+        document.getElementById('demo01').innerHTML = "Vorname: " + person.firstName;
+
+        // Vorname mit Bracket-notation ausgeben: 
+        document.getElementById('demo01').innerHTML += "<br>Vorname: " + person['firstName'];
+
+        // vollen Namen mittels Objekt-Methode ausgeben
+        document.getElementById("demo03").innerHTML = person.fullName();
+
+    </script>
+
+</body>
+
+</html>

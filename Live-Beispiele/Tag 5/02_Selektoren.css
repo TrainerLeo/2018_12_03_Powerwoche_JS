@@ -1,0 +1,129 @@
+/* Universalselektor */
+
+/* 
+*{
+    margin: 0;
+    padding: 0;
+} 
+*/
+
+/* Typselektoren */
+p{}
+
+/* Klassenselektoren */
+.my-class{}
+
+/* ID-Selektoren */
+#my-id{}
+
+/* Kombinatoren */
+/* Nachfahren-Kombinator (descendant combinator) */
+
+/* #container .my-class{} */
+
+div span{
+    color: red;
+}
+
+/* Kind-Kombinator (child combinator) */
+
+div>span{
+    font-style: italic;
+}
+
+/* Benachbarte Geschwister Kombinator (adjacent sibling combinator) */
+
+h1+p{
+    color: blue;
+}
+
+/* Allgemeiner Geschwister Kombinator (general sibling combinator) */
+
+h1~p{
+    text-decoration: underline;
+}
+
+/* Attributselektoren */
+
+/* alle mit Target-Attribut */
+[target]{
+
+}
+
+a[target]{}
+
+/* alle, die einen bestimmten Wert haben */
+
+a[target="_blank"]{
+
+}
+
+/* ...die mit einer bestimmten Zeichenfolge beginnen */
+
+div[id^="grad"]{}
+
+/* ...mit Zeichenfolge enden */
+
+div[id$="xyz"]{}
+
+/* ...Zeichenfolge enthalten */
+
+div[id*="xyz"]{}
+
+/* ...Wort enthalten */
+div[id~="word"]{}
+
+/* Elemente ausschließen */
+
+.container:not(.my-class){}
+
+
+/* Pseudoklassen */
+#hover-test:hover{
+    color: red;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: chartreuse;
+}
+
+a:visited{
+    color: darkorange;
+}
+
+a:hover{
+    background-color: blanchedalmond;
+}
+
+a:active{
+    color: pink;
+}
+
+
+/* Pseudoelemente */
+
+p.my-class::first-letter{
+    font-family: Parchment;
+    font-size: 42px;
+}
+
+p#before-test::before{
+    content: "";
+    display: block;
+    border-top: 2px solid green;
+}
+
+p#before-test::after{
+    content: "";
+    display: block;
+    border-top: 2px solid green;
+}
+
+#fl-demo::first-line{
+    font-weight: bold;
+}

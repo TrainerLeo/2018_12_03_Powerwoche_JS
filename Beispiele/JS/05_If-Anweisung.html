@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>If-Anweisung</title>
+    <style>
+        body{
+            font-family: Cambria, Georgia, 'Times New Roman', serif;
+            font-size: 16px;
+            padding: 2rem;
+        }
+
+        div{
+            width: 350px;
+            min-height: 80px;
+            border: 1px solid forestgreen;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>If-Anweisung</h1>
+    <div id="demo_01">5</div>
+    <div id="demo_02"></div>
+
+    <!-- Aufgabe: Button einbauen -->
+    <!-- <button onclick="myFunction();">Click</button> -->
+
+
+    <script>
+        
+        var x = document.getElementById('demo_01').innerHTML;
+        
+
+        /* function myFunction(){
+            if(x === '5'){
+            document.getElementById('demo_02').innerHTML = "Test funktioniert!";
+        }
+        } */
+
+        if(x === '5'){
+            document.getElementById('demo_02').innerHTML = "Test funktioniert!";
+        }
+
+    </script>
+</body>
+</html>

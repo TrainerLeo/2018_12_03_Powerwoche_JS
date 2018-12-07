@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../jQuery/jquery-3.3.1.js"></script>
+    <title>Traversing</title>
+    <style>
+        div{
+            color: greenyellow;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Üüüüüüüüüüüberschrift</h2>
+        <div id="demo01">Demo-Div01</div>
+        <div id="demo02">Demo-Div02</div>
+        <div id="demo03">Demo-Div03</div>
+        <p class="par">Paragraph01</p>
+        <div id="demo04">Demo-Div04
+            <div class="myDiv">innerDiv01</div>
+            <div class="myDiv">innerDiv02</div>
+            <div class="myDiv">innerDiv03</div>
+        </div>
+        <h2>Üüüüüüüüüüüüüberschriiiift</h2>
+        <div id="demo05">Demo-Div05</div>
+        <div id="demo06">Demo-Div06</div>
+        <div id="demo07">Demo-Div07</div>
+        <div id="demo08">Demo-Div08</div>
+        <p class="par">Paragraph02</p>
+        <p class="par">Paragraph03</p>
+    </div>
+
+    <p class="par">außerhalb01</p>
+    <p class="par">außerhalb02</p>
+    <p class="par">außerhalb03</p>
+    <p class="par">außerhalb04</p>
+
+    <script>
+        $(function(){
+
+            $('#demo05').next().css('background-color', 'green');
+
+             $('#demo05').siblings().css('color', 'darkorange');
+
+            $('#demo05').nextAll().css('font-style', 'italic');
+
+           $('#demo02').nextUntil('h2').css('text-decoration', 'underline');
+
+            /* 
+            .prev()
+            .prevAll()
+            .prevUntil()
+
+            .children()
+            .parent() 
+            */
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>More Basics</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        div {
+            border: 2px solid black;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo01">1</div>
+    <div id="demo02">2</div>
+    <div id="demo03">3</div>
+    <div id="demo04">4
+        <p>Lorem ipsum dolor sit amet.</p>
+        Lorem ipsum dolor sit amet.
+    </div>
+    <div id="demo05">5</div>
+    <button id="btn-stop">Stop</button>
+    <button id="btn-finish">Finish</button>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#demo01').click(function () {
+                $(this).css('background-color', 'blue');
+            });
+
+            $('#demo01').dblclick(function () {
+                $(this).css('background-color', 'red');
+            });
+
+            $('#demo02').mouseenter(function () {
+                $(this).css('background-color', 'blue');
+            });
+
+            $('#demo03').mouseleave(function () {
+                $(this).css('background-color', 'blue');
+                $('#demo05').html('Wollen Sie wirklich schon gehen? :(');
+                /* console.log($('#demo04').html()); */
+            });
+
+
+            $('#demo04').click(function(){
+                $('#demo05').slideToggle(5000);
+            });
+
+            $('#btn-stop').click(function(){
+                $('#demo05').stop();
+            });
+
+
+            $('#btn-finish').click(function(){
+                $('#demo05').finish();
+            });
+
+
+
+
+            /* .on() */
+            $('#demo04').on({
+                mouseenter: function(){
+                    $(this).css('background-color', 'darkorange');
+                },
+                mouseleave: function(){
+                    $(this).css('background-color', 'initial');
+                }
+            });
+
+            /* 
+            .on({});
+            */
+
+           /* 
+            //häufige jQuery Events
+
+            .blur()
+            .focus()
+            .change()
+
+            .keydown()
+            .keypress()
+            .keyup()
+            
+            .resize()
+            .scroll()
+
+           
+           */
+
+        });
+
+
+    </script>
+</body>
+
+</html>

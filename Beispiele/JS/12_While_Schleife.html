@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS While-Schleife</title>
+</head>
+
+<body>
+
+    <h1>JavaScript While-Schleife</h1>
+
+    <p id="demo"></p>
+
+    <script>
+
+        var text = "";
+        var i = 0;
+        while (i < 10) {
+            text += "Hochzählen: " + i + "<br>";
+            i++;
+        }
+        document.getElementById("demo").innerHTML = text;
+
+
+
+// 1 Zeile pro Sekunde ausgeben:
+        /* var i = 0, max = 10, text = "";
+        function f() {
+            text += "Hochzählen: " + i + "<br>";
+            document.getElementById("demo").innerHTML = text;
+            i++;
+            if (i < max) {
+                setTimeout(f, 1000);
+            }
+        }
+        f(); */
+
+    </script>
+    <!-- 
+
+linebreak am Ende - sonst fangen wir mit einem linebreak an 
+(alles wird eine Zeile tiefer gesetzt) und bleiben am Schluss 
+in der gleichen Zeile stehen.
+
+-->
+</body>
+
+</html>

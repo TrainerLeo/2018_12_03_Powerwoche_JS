@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>slide()-Methode</title>
+    <style>
+        div{
+            width: 350px;
+            border: 2px solid midnightblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            text-align: center;
+            padding: 1.5em;
+        }
+
+        #test01, #test03{
+            background-color: midnightblue;
+            color: floralwhite;
+        }
+
+        #test02, #test04{
+            background-color: skyblue;
+        }
+
+        #test02{
+            display: none;
+        }
+
+        #test03{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="test01">Klick hier!</div>
+    <div id="test02">Hier gibts ganz wichtige Infos!</div>
+    <div id="test03">Klick hier!</div>
+    <div id="test04">Das lässt sich verstecken!</div>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#test01').click(function(){
+                $('#test02').slideDown();
+            });
+            
+            $('#test03').click(function(){
+                $('#test04').slideUp();
+            });
+
+        });
+    </script>
+</body>
+</html>

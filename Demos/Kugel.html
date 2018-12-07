@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        #ball {
+            margin: 25px auto;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(100px 100px at 70px 70px, white 5%, rgb(221, 252, 252) 10%, 
+                                      rgb(17, 141, 190) 50%, rgb(29, 80, 134) 90%, rgb(18, 53, 92) 130%);
+            border-radius: 50%;
+            box-shadow:30px 45px 60px -30px #1a1a1a;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Rollen</button>
+    <div id="ball"></div>
+    <script>
+            $(document).ready(function(){
+    
+                $('#myButton').click(function(){
+    
+                    $('#ball').animate({
+                        left: '500px'
+                    }, 2000, 'linear').animate({
+                        left: '-500px',
+                        top: '100px'
+                    }, 2000);             
+                });
+    
+            });
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>nth-Demo</title>
+    <style>
+        /* p:nth-child(3n + 1){
+            color: red;
+        } */
+
+        #demo{
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+        }
+
+        p:nth-child(odd){
+            color: red;
+        }
+
+        p:nth-of-type(odd){
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p>Das ist Paragraph Nr. 1</p>
+    <p>Das ist Paragraph Nr. 2</p>
+    <p>Das ist Paragraph Nr. 3</p>
+    <div id="demo"></div>
+    <p>Das ist Paragraph Nr. 4</p>
+    <p>Das ist Paragraph Nr. 5</p>
+    <p>Das ist Paragraph Nr. 6</p>
+    <p>Das ist Paragraph Nr. 7</p>
+    <p>Das ist Paragraph Nr. 8</p>
+    <p>Das ist Paragraph Nr. 9</p>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Else-If</title>
+    <style>
+        body {
+            font-family: Cambria, Georgia, 'Times New Roman', serif;
+            font-size: 16px;
+            padding: 2rem;
+        }
+
+        div {
+            width: 350px;
+            min-height: 80px;
+            border: 1px solid forestgreen;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Else-If</h1>
+    <p>Gib einen Wochentag in das Input-Feld ein und klicke auf den Button.</p>
+    <input id="input01" type="text" placeholder="Wochentag">
+    <div id="demo"></div>
+    <button onclick="myFunction();">Click</button>
+
+    <script>
+        var text1 = document.getElementById('input01');
+        var div2 = document.getElementById('demo');
+        var text;
+
+        function myFunction(){
+            
+            div2.innerHTML = "";
+
+
+            if(text1.value == 'Sonntag'){
+                text = "Heute ist frei!!";
+            }
+            else if (text1.value == "Samstag"){
+                text = "Heute ist Wochenendbeginn!";
+            }
+            else if(text1.value == ""){
+                text = "Bitte einen Wochentag eingeben.";
+            }
+            else{
+                text ="Heute ist ein Arbeitstag.";
+            } 
+            div2.innerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html>

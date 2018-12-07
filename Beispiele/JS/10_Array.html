@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+    <style>
+        body {
+            font-family: Cambria, Georgia, 'Times New Roman', serif;
+            font-size: 16px;
+            padding: 2rem;
+        }
+
+        div {
+            width: 200px;
+            min-height: 40px;
+            border: 1px solid forestgreen;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            /* text-align: center; */
+            /* line-height: 40px; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo01"></div>
+    <button onclick="allFruits();">Alle Früchte</button>
+    <div id="demo02"></div>
+    <button onclick="firstFruit();">Erste Frucht</button>
+    <div id="demo03"></div>
+    <button onclick="alphabetical();">Sortieren</button>
+    <!-- <div id="demo04"></div>
+    <button onclick="sentence();">Satz</button> -->
+    <div id="demo05"></div>
+    <button onclick="howMany();">Anzahl</button>
+    <div id="demo06"></div>
+    <button onclick="sortNumbers();">Nummern ordnen</button>
+
+
+    <script>
+        var fruitSalad = ['Banane', 'Apfel', 'Orange', 'Kiwi'];
+
+
+        // zuerst Schleifen besprechen! Dann: 
+        /* var myName = new Array();
+
+        myName[0] = "Hallo,";
+        myName[1] = "mein";
+        myName[2] = "Name";
+        myName[3] = "ist";
+        myName[4] = "Leo."; */
+
+        function allFruits() {
+            document.getElementById('demo01').innerHTML = fruitSalad;
+        }
+
+        function firstFruit() {
+            document.getElementById('demo02').innerHTML = fruitSalad[0];
+        }
+
+        /* function sentence(){
+            var i, text;
+            text = "";
+            
+            for(i=0; i<myName.length; i++){
+                text+= myName[i] + " ";
+            }
+            document.getElementById('demo04').innerHTML = text;
+        } */
+
+        function alphabetical() {
+            fruitSalad.sort();
+            // in umgekehrter Reihenfolge ausgeben:
+            /* fruitSalad.reverse(); */
+            document.getElementById('demo03').innerHTML = fruitSalad;
+        }
+
+        function howMany() {
+            document.getElementById('demo05').innerHTML = fruitSalad.length;
+        }
+
+        // Numbers sortieren:
+
+        var numbers = [70, 100, 3, 1, 37, 15];
+            document.getElementById('demo06').innerHTML = numbers;
+
+        function sortNumbers() {
+            numbers.sort(function (a, b) { return a - b });
+            document.getElementById('demo06').innerHTML += "<br>" + numbers;
+        }
+
+    </script>
+
+</body>
+
+</html>

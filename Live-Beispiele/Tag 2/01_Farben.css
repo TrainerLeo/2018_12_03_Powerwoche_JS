@@ -1,0 +1,30 @@
+body{
+    background-color: darkorange;
+}
+
+div{
+    width: 150px;
+    height: 150px;
+    /* shorthand property (Kurzschreibweise) für border (Rahmen): */
+    border: 2px solid midnightblue;
+}
+
+#demo01{
+    background-color: rebeccapurple;
+}
+
+#demo02{
+    background-color: rgb(102, 51, 153);
+}
+
+#demo03{
+    background-color: #663399;
+}
+
+#demo04{
+    background-color: hsl(270, 50%, 40%);
+}
+
+#demo05{
+    background-color: rgba(102, 50, 153, 0.5);
+}

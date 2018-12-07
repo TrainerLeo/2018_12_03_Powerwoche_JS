@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch-Case</title>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.5em;
+
+        }
+
+        fieldset {
+            margin: 3em;
+            padding: 2em;
+            width: 350px;
+        }
+
+        #demo {
+            margin: 3em;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <fieldset>
+        <legend>Milchshakes</legend>
+        <select id="milkShakes">
+            <option>Bitte auswählen</option>
+            <option>Banane</option>
+            <option>Erdbeer</option>
+            <option>Vanille</option>
+        </select>
+        <button onclick="chosen();">Wählen</button>
+    </fieldset>
+
+    <div id="demo"></div>
+
+
+    <script>
+        function chosen() {
+            var choice = document.getElementById('milkShakes').value;
+            var div = document.getElementById('demo');
+            var text;
+
+            switch (choice) {
+                case "Banane":
+                    text = "Du hast Dich für unser beliebtes Bananenshake entschieden!";
+                    break;
+                case "Erdbeer":
+                    text = "Du hast Dich für unser fruchtiges Erdbeershake entschieden!";
+                    break;
+                case "Vanille":
+                    text = "Du hast Dich für den Klassiker - Vanilleshake - entschieden!";
+                    break;
+                default:
+                    text = "Bitte ein Shake auswählen!";
+            }
+            div.innerHTML = text;
+
+        }
+
+        /* switch(fruits) {
+        case "Banana":
+            text = "Banana is good!";
+        break;
+        case "Orange":
+        text = "I am not a fan of orange.";
+        break;
+        case "Apple":
+        text = "How you like them apples?";
+        break;
+        default:
+        text = "I have never heard of that fruit...";
+    }
+    document.getElementById("demo").innerHTML = text; */
+
+    </script>
+
+</body>
+
+</html>

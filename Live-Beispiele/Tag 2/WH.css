@@ -1,0 +1,11 @@
+p{
+    color: red;
+}
+
+.italic-font{
+    font-style: italic;
+}
+
+#my-great-id{
+    text-decoration: underline;
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" type="text/css" href="myStyles.css">
+
+  <title>Tabelle</title>
+  <!-- entweder hier Style, oder im external stylesheet -->
+  <style>
+      table{
+    border-collapse: collapse;
+    width: 450px;
+}
+
+table, th, td {
+    border: 1px solid rgb(32, 27, 114);
+    padding: 3px;
+}
+
+caption{
+    border: 2px solid rgb(32, 27, 114);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+th{
+    background-color: rgb(57, 177, 177);
+}
+
+tr:nth-child(even){
+    background-color: gainsboro;
+}
+
+tr:nth-child(odd){
+    background-color: azure;
+}
+
+/*
+tr td:nth-of-type(even){
+    background-color: blue;
+}
+*/
+
+  </style>
+
+</head>
+
+<body>
+
+    <h1>Beispiel für das Styling einer Tabelle</h1>
+
+    <!-- Tabelle: -->
+    <table>
+        <caption colspan="4">Das ist eine Testtabelle</caption> <!-- Caption kommt direkt nach dem table-tag -->
+        <thead>
+            <tr>
+                <th>Obst</td>
+                    <th>Farbe</td>
+                        <th>Herkunft</td>
+                            <th>Vorr&auml;tig</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apfel</td>
+                <td>rot</td>
+                <td>&Ouml;sterreich</td>
+                <td>ja</td>
+            </tr>
+            <tr>
+                <td>Banane</td>
+                <td>gelb</td>
+                <td>Brasilien</td>
+                <td>ja</td>
+            </tr>
+            <tr>
+                <td>Kiwi</td>
+                <td>gr&uuml;n</td>
+                <td>Australien</td>
+                <td>nein</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+<!-- auch das Script könnte in einer externen Datei stehen -->
+<script>
+
+</script>
+
+</body>
+
+</html>

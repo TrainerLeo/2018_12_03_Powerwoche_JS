@@ -1,0 +1,27 @@
+.float-container{
+    background-color: cadetblue;
+}
+
+.float-item{
+    background-color: aqua;
+    border: 2px solid midnightblue;
+    height: 150px;
+    width: 150px;
+    float: left;
+}
+
+.clearboth{
+    clear: both;
+}
+
+.inline-container{
+    background-color: rgb(215, 255, 215);
+}
+
+.inline-item{
+    background-color: chartreuse;
+    border: 2px solid darkgreen;
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}

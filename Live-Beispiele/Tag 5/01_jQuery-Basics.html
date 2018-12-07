@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="../../jQuery/3.3.1/jquery.min.js"></script> -->
+    <title>jQuery-Basics</title>
+    <style>
+        div{
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo01">1</div>
+    <div id="demo02">2</div>
+    <div id="demo03">3</div>
+    <div id="demo04">4</div>
+    <button id="btn-green">Grün</button>
+
+    <script>
+        
+       /*  $.noConflict();
+
+        jQuery(document).ready(function(){
+            jQuery(selector)....
+        }); */
+
+        /* var jq = $.noConflict();
+
+        jq(document).ready(function(){
+            jq(selector)....
+        }); */
+
+        /* $.noConflict();
+
+        jQuery(document).ready(function($){
+            $(selector)...
+        }); */
+
+
+
+
+
+        /* 
+        // Syntax
+
+        jQuery(selector).action();
+        $(selector).action();
+        */
+
+    /* function makeGreen(){
+            document.getElementById('demo01').style.backgroundColor = "blue";        
+    }
+    document.getElementById('btn-green').addEventListener('click', makeGreen); */
+
+
+
+        $(document).ready(function(){
+
+            /* $('div>span').... */
+            /* $('p:nth-of-type(odd)')... */
+
+            $('#btn-green').click(function(){
+                $('#demo01').css('background-color', 'green');
+            });
+
+            $('#demo02').click(function(){
+                $(this).css('background-color', 'red');
+            });
+
+
+        });
+
+        /* $(function(){
+
+        }); */
+
+
+    </script>
+</body>
+</html>

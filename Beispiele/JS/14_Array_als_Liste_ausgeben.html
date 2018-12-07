@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS Arrays</title>
+</head>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>Wir geben ein Array mit einer For-Schleife aus:</p>
+
+<p id="demo"></p>
+
+<script>
+var fruits, text, fLength, i;
+
+fruits = ["Bananen", "Orangen", "Äpfel", "Mangos"];
+fLength = fruits.length;
+text = "<ul>";
+for (i = 0; i < fLength; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

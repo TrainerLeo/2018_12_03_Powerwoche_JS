@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Einfache Codeblöcke</title>
+    <style>
+        div{
+            min-height: 1.2em;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+/*             border: 1px solid red; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Einfache Codeblöcke</h1>
+
+    <div id="textBox01"> </div>
+    <div id="textBox02"> </div>
+
+    <button onclick="myFunction();">Text einfügen</button>
+
+    <!-- <button onclick="document.write('hallo')">Hallo</button> -->
+
+
+    <script>
+
+        var textBlock1 = document.getElementById('textBox01');
+        var textBlock2 = document.getElementById('textBox02');
+
+        textBlock2.innerHTML = "Dieser Text wurde mittels JS eingefügt.";
+
+        function myFunction(){
+            textBlock1.innerHTML = "Test-Text: wird mittels einer JS Funktion eingefügt.";
+        }
+        
+       
+
+    </script>
+
+
+</body>
+   
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Beispiel 1</title>
+</head>
+
+<body>
+
+    <h2>Was kann man mit Javascript machen?</h2>
+
+    <p id="demo">Mit JavaScript k&ouml;nnen wir zum Beispiel das Aussehen (Style) eines HTML-Elements ver&auml;ndern.</p>
+
+    <button id="buttontext" type="button" onclick="change();">Vergr&ouml;&szlig;ern</button>
+
+
+
+    <script type="text/javascript">
+        function change() {
+            var big = document.getElementById('demo'); //Variable deklarieren und Element mit der id "demo" holen        
+            var buttonText = document.getElementById('buttontext'); //Variable deklarieren und Element mit der id "buttontext" holen
+            if (big.style.fontSize == '35px') {
+                big.style.fontSize = 'initial';
+                buttonText.innerHTML = "Vergrößern";
+            }
+            else {
+                big.style.fontSize = '35px';
+                buttonText.innerHTML = "Verkleinern";
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>

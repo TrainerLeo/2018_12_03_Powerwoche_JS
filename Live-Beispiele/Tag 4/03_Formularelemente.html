@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formularelemente</title>
+    <style>
+        body{
+            font-size: 18px;
+        }
+
+        form{
+            width: 50%;
+        }
+        .lbl-inp-container{
+            margin-bottom: 10px;
+        }
+
+        .my-lbl{
+            /* background-color: aqua; */
+            width: 110px;
+            display: inline-block;
+        }
+
+        #test{
+            /* opacity: 0; */
+            /* visibility: hidden; */
+            display: none;
+        }
+
+        /* 
+        :focus{
+            background-color: aqua;
+        } 
+        */
+
+        textarea{
+            resize: none;
+        }
+
+        .range{
+            display: inline-block;
+            width: 40px;
+            height: 18px;
+            padding: 5px 10px;
+            border: 2px solid darkgreen;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <form action="#" >
+        <input type="text" id="test" disabled>
+        <div class="lbl-inp-container">
+            <label for="first-name" class="my-lbl">Vorname:</label>
+            <input type="text" id="first-name" class="my-inp" name="first-name" placeholder="Max" required>
+        </div>
+        <div class="lbl-inp-container">
+            <label for="last-name" class="my-lbl">Nachname:</label>
+            <input type="text" id="last-name" class="my-inp" name="last-name" placeholder="Mustermann">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="password" class="my-lbl">Passwort:</label>
+            <input type="password" id="password" class="my-inp" name="password" pattern="">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="email" class="my-lbl">E-Mail:</label>
+            <input type="email" id="email" class="my-inp" name="email" pattern="">
+        </div>
+        <!-- <div class="lbl-inp-container">
+            <label for="homepage" class="my-lbl">Homepage:</label>
+            <input type="url" id="homepage" class="my-inp" name="homepage" pattern="" title="Bitte geben Sie https://... ein!"
+                placeholder="https://muster.de">
+        </div> -->
+        <div class="lbl-inp-container">
+            <label for="my-color" class="my-lbl">Lieblingsfarbe:</label>
+            <input type="color" id="my-color" class="my-inp" name="my-color">
+        </div>
+        <div class="lbl-inp-container">
+            <label for="range" class="my-lbl">Range:</label>
+            <span class="range" id="span-min"></span>
+            <input type="range" oninput="textOutput();" id="range" class="my-inp" name="range" min="30" max="100" value="90" step="10">
+            <span class="range" id="span-max"></span>
+            <span id="output-div" class="range"></span>
+        </div>
+
+        <fieldset>
+            <legend>Pizze</legend>
+
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizzas" checked>
+                <label for="">Margherita</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizzas">
+                <label for="">Tonno</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="radio" name="pizzas">
+                <label for="">Della Casa</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Extras</legend>
+
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras" value="corn">
+                <label>Mais</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras" value="salami">
+                <label for="">Salami</label>
+            </div>
+            <div class="lbl-inp-container">
+                <input type="checkbox" name="extras" value="paprika">
+                <label for="">Paprika</label>
+            </div>
+        </fieldset>
+
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <select name="" id="">
+            <option value="Margherita">Margherita</option>
+            <option value="Tonno">Tonno</option>
+            <option value="DellaCasa">Della Casa</option>
+        </select>
+
+        <div class="lbl-inp-container">
+            <label for="number" class="my-lbl">Zahl:</label>
+            <input type="number" id="number" class="my-inp" name="number" min="1" max="120">
+        </div>
+        <div class="lbl-inp-container">
+            <input type="submit" value="Abschicken">
+            <input type="reset">
+        </div>
+    </form>
+
+<script>
+    var rangeInp = document.getElementById('range');
+    var outDiv = document.getElementById('output-div');
+    document.getElementById('span-min').innerHTML = rangeInp.min;
+    document.getElementById('span-max').innerHTML = rangeInp.max;
+    outDiv.innerHTML = rangeInp.value;
+
+function textOutput(){
+    var myOutput = rangeInp.value;
+    outDiv.innerHTML = myOutput;
+}
+
+</script>
+</body>
+
+</html>

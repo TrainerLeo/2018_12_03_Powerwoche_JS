@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unterschiedlichen Datentypen addieren</title>
+    <style>
+        #demo{
+            min-height: 4em;
+            margin: 2em;
+            line-height: 1.5;
+            font-family: Cambria, Georgia, 'Times New Roman', serif;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Unterschiedliche Datentypen "addieren"</h1>
+
+    <div id="demo"></div>
+
+    <script>
+        var x = 5 + 5;
+        var y = "5" + 5;
+        var z = "Hello" + 5;
+        document.getElementById("demo").innerHTML = x + "<br>" + y + "<br>" + z;
+
+        // Aufgabe: Datentypen herausfinden
+
+        /* document.getElementById('demo').innerHTML = x + " - Datentyp: " + typeof x + "<br>" +
+                                                    y + " - Datentyp: " + typeof y +"<br>" + 
+                                                    z + " - Datentyp: " + typeof z; */
+
+
+    </script>
+
+</body>
+
+</html>

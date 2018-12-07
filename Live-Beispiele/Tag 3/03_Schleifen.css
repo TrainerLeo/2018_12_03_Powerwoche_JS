@@ -1,0 +1,14 @@
+#demo01, #demo02{
+    width: 300px;
+    min-height: 200px;
+    border: 2px solid midnightblue;
+}
+
+button{
+    margin-top: 10px;
+}
+
+p{
+    font-size: 2em;
+    color: chartreuse;
+}

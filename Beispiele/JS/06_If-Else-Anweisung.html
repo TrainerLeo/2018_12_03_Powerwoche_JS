@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>If-Else-Anweisung</title>
+    <style>
+        body{
+            font-family: Cambria, Georgia, 'Times New Roman', serif;
+            font-size: 16px;
+            padding: 2rem;
+        }
+
+        div{
+            width: 350px;
+            min-height: 80px;
+            border: 1px solid forestgreen;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>If-Else-Anweisung</h1>
+    <div id="demo_01">5</div>
+    <div id="demo_02"></div>
+    <button onclick="myFunction();">Click</button>
+
+    <!-- Aufgabe: Datentyp mit typeof abfragen -->
+
+    <!-- <div id="demo_03">5</div>
+    <div id="demo_04"></div>
+    <button onclick="myFunction2();">Click</button> -->
+
+    <script>
+        var x = document.getElementById('demo_01').innerHTML;
+        var text = document.getElementById('demo_02');
+        var text2 = document.getElementById('demo_04');
+        
+        function myFunction(){
+            if(x === 5){
+                text.innerHTML = "Der Datentyp stimmt überein.";
+            }
+            else{
+                text.innerHTML = "Der Datentyp stimmt NICHT überein.";
+            }
+        }
+
+        /* function myFunction2(){
+            if(typeof x === 'string'){
+                text2.innerHTML = "Der Datentyp ist ein String.";
+            }
+            else{
+                text2.innerHTML = "Der Datentyp ist KEIN String.";
+            }
+        } */
+
+
+        // verkürzte Schreibweise: 
+
+        /* var a = 5;
+
+        (a===5)?alert('stimmt'):alert('stimmt nicht'); */
+
+    </script>
+    
+</body>
+</html>

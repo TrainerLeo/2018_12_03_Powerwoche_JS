@@ -1,0 +1,56 @@
+div {
+    width: 100px;
+    height: 100px;
+}
+
+.demo{
+    height: 100%;
+    width: 100%;
+    background-color: crimson;
+}
+
+#demo01 {
+    background-color: aqua;
+}
+
+#demo02 {
+    background-color: chartreuse;
+    padding: 20px;
+}
+
+#demo03 {
+    background-color: chartreuse;
+    padding: 20px;
+    border: 10px solid midnightblue;
+}
+
+#demo04 {
+    background-color: chartreuse;
+    padding: 20px;
+    border: 10px solid midnightblue;
+    box-sizing: border-box;
+}
+
+#demo05 {
+    background-color: chartreuse;
+}
+
+#demo06 {
+    background-color: chartreuse;
+    border: 10px solid midnightblue;
+
+    padding: 20px 50px 10px 0px;
+}
+
+#demo07 {
+    background-color: chartreuse;
+    border: 10px solid midnightblue;
+
+    padding: 20px 50px;
+}
+
+#demo08 {
+    background-color: chartreuse;
+    border: 10px solid midnightblue;
+    margin-top: 20px;
+}

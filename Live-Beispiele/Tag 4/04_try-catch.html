@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="inp-text">
+    <button id="btn-ok" onclick="myFunction();">OK</button>
+    <div id="demo"></div>
+
+    <script>
+        
+        var inpField = document.getElementById('inp-text');
+        
+        function myFunction(){
+            var inpValue = inpField.value;
+
+            try{
+                //ganz tolle Funktion
+
+                if(inpValue == "") throw "ist leer.";
+                if(isNaN(inpValue)) throw "ist keine Zahl.";
+            }
+            catch (err){
+                /* alert('Der Eingabwert ' + err); */
+                document.getElementById('demo').innerHTML = 'Der Eingabwert ' + err;
+            }
+        }
+
+    </script>
+</body>
+</html>

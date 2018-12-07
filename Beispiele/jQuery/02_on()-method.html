@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>on()-Methode</title>
+    <style>
+        div{
+            width: 350px;
+            height: 200px;
+            border: 2px solid midnightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eine Methode, mehrere Events</h1>
+    <div></div>
+
+    <script>
+        
+        $(document).ready(function(){
+
+            $('div').on({
+                click: function(){
+                    $(this).css('background-color', 'firebrick');
+                },
+                mouseenter: function(){
+                    $(this).css('background-color', 'skyblue');
+                },
+                mouseleave: function(){
+                    $(this).css('background-color', 'chartreuse');
+                }
+
+            });
+
+        });
+
+    </script>
+</body>
+</html>

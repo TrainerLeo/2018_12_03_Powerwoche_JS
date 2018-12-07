@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Animationen</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #demo{
+            width: 250px;
+            height: 250px;
+            border: 2px solid midnightblue;
+            position: absolute;
+            display: none;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn-ok">OK</button>
+    <div id="demo"></div>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('#btn-ok').click(function(){
+                $('#demo').fadeToggle(1000).animate({
+                    width: '+=50px',
+                    height: '100px'
+                }, 2000, 'linear', function(){alert('Fertig mit der 1. Animation!');}).animate({
+                    top: '350px'
+                });
+            });
+
+
+
+
+
+        });
+        
+    </script>
+</body>
+</html>

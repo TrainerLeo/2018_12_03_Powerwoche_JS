@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>slide</title>
+    <style>
+        div{
+            width: 300px;
+            height: 100px;
+            border: 2px solid midnightblue;
+        }
+
+        #demo01:hover{
+            cursor: pointer;
+        }
+
+        #demo03{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn-ok">OK 4</button>
+    <div id="demo01">
+        1 Lorem, ipsum dolor.
+    </div>
+    <div id="demo02">
+        2 Lorem ipsum dolor sit amet.
+    </div>
+    <div id="demo03">
+        3 Lorem ipsum dolor sit amet.
+    </div>
+    <div id="demo04">
+        4 Lorem, ipsum dolor.
+    </div>
+    <div id="demo05">
+        5 Lorem ipsum dolor sit amet.
+    </div>
+    
+    <script>
+        
+
+        $(document).ready(function(){
+
+            $('#demo01').click(function(){
+                $('#demo02').slideUp();
+                $('#demo03').slideDown();
+            });
+
+            $('#btn-ok').click(function(){
+                $('#demo04').slideToggle(2000, function(){
+                    alert('Slide abgeschlossen! :)');
+                });
+            });
+
+            $('#demo04').click(function(){
+                $(this).next().fadeToggle();
+            });
+
+            // .hide(), .show(), .toggle(), .fadeIn(), .fadeOut(), .fadeToggle()
+
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>fade()-Methode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        #container {
+            width: 200px;
+            height: 200px;
+            margin: 50px 100px;
+        }
+
+        #demo {
+            width: 100%;
+            height: 100%;
+            background-color: midnightblue;
+        }
+
+        #demoButton {
+            padding: 0.5em 1.5em;
+            background-color: maroon;
+            color: floralwhite;
+            border: 1px solid floralwhite;
+            outline: none;
+        }
+
+        #demoButton:hover {
+            cursor: pointer;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        #flex-container{
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        #demo01,
+        #demo02,
+        #demo03 {
+            width: 200px;
+            height: 200px;
+            background-color: midnightblue;
+            margin: 50px 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="demo"></div>
+    </div>
+    <button id="demoButton">Ein-/ausblenden</button>
+    <div id="flex-container">
+        <div id="demo01"></div>
+        <div id="demo02"></div>
+        <div id="demo03"></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $('#demoButton').click(function () {
+                $('#demo').fadeToggle(2000);
+                $('#demo01').fadeTo(800, 0.2);
+                $('#demo02').fadeTo(600, 0.5);
+                $('#demo03').fadeTo('slow', 0.7);
+            });
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

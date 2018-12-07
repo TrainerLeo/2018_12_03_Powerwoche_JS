@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Accordion-Widget</title>
+
+    <style>
+        body {
+            font-family: Tahoma, Verdana, sans-serif;
+            font-size: 18px;
+        }
+
+        #container {
+            width: calc(354px + 4em);
+            margin: 4em auto;
+        }
+
+        .clickable,
+        .slide-down {
+            width: 350px;
+            padding: 1em 2em;
+            border: 2px solid midnightblue;
+        }
+
+        .clickable {
+            background-color: midnightblue;
+            color: floralwhite;
+            text-decoration: underline;
+        }
+
+        .clickable:not(:last-of-type){
+            border-bottom: 1px solid floralwhite;
+        }
+
+        .clickable:hover{
+            cursor: pointer;
+        }
+
+        .slide-down {
+            display: none;
+            background-color: skyblue;
+            color: darkslateblue;
+        }
+
+        .box {
+            border: 1px solid darkslateblue;
+            border-radius: 5px;
+            padding: 1em;
+        }
+
+        .box:not(:last-of-type) {
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="clickable">
+            Info zu Thema 1
+        </div>
+        <div class="slide-down">
+            <div class="box">Lorem ipsum dolor sit amet.</div>
+            <div class="box">Lorem, ipsum dolor.</div>
+            <div class="box">Lorem ipsum dolor sit amet.</div>
+        </div>
+
+        <div class="clickable">
+            Info zu Thema 2
+        </div>
+        <div class="slide-down">
+            <div class="box">Lorem, ipsum dolor.</div>
+            <div class="box">Lorem ipsum dolor sit.</div>
+        </div>
+
+        <div class="clickable">
+            Info zu Thema 3
+        </div>
+        <div class="slide-down">
+            <div class="box">Lorem ipsum dolor sit.</div>
+            <div class="box">Lorem, ipsum dolor.</div>
+            <div class="box">Lorem ipsum dolor sit amet.</div>
+        </div>
+
+        <div class="clickable">
+            Info zu Thema 4
+        </div>
+        <div class="slide-down">
+            <div class="box">Lorem, ipsum dolor.</div>
+            <div class="box">Lorem ipsum dolor sit.</div>
+            <div class="box">Lorem ipsum dolor sit amet.</div>
+            <div class="box">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, beatae quod tenetur
+                voluptatum enim libero. Doloremque at reiciendis molestias nisi.</div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.clickable').click(function () {
+                $(this).next().slideToggle();
+            });
+
+            
+
+
+
+        });
+    </script>
+</body>
+
+</html>

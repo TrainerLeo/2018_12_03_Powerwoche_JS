@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jQuery-Basics</title>
+    <style>
+        body {
+            padding-bottom: 200px;
+        }
+
+        div {
+            width: 350px;
+            padding: 30px;
+            border: 2px solid midnightblue;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Events</h1>
+
+    <div id="test01">Klick mal hier drauf!</div>
+    <div id="test02">Doppelklick hier!</div>
+    <div id="test03">Mouseenter-Demo</div>
+    <div id="test04">Raus mit der Maus...</div>
+    <div id="test05">Maustaste drücken</div>
+    <div id="test06">Maustaste loslassen</div>
+    <div id="test07">Hover-Demo</div>
+    <div>
+        <input type="text" id="input01">
+    </div>
+    <textarea name="myTextarea01" id="textarea01" cols="30" rows="10"></textarea>
+
+    <script>
+        $(document).ready(function () {
+            $("#test01").click(function () {
+                alert('Es funktioniert!');
+            });
+
+            $("#test02").dblclick(function () {
+                alert('Es funktioniert!');
+            });
+
+            $("#test03").mouseenter(function () {
+                $(this).css('background-color', 'skyblue');
+            });
+
+            $("#test04").mouseleave(function () {
+                $(this).css('background-color', 'skyblue');
+            });
+
+            $("#test05").mousedown(function () {
+                $(this).css('background-color', 'skyblue');
+            });
+
+            $("#test06").mouseup(function () {
+                $(this).css('background-color', 'skyblue');
+            });
+
+            $("#test07").hover(function () {
+                $(this).css('background-color', 'skyblue');
+            },
+                function () {
+                    $(this).css('background-color', 'chartreuse');
+                });
+
+            $('#input01').focus(function () {
+                $(this).css('background-color', 'chartreuse');
+            });
+
+            $('#textarea01').blur(function () {
+                $(this).css('background-color', 'firebrick');
+            });
+
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>
